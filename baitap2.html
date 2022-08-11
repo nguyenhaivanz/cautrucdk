@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhập số tuổi của học sinh</p>
+<input id="dotuoi" type="text" placeholder="dotuoi">
+<br>
+<br>
+<button onclick="ketqua()">ketqua</button>
+<p id="ketqua" ></p>
+</body>
+</html>
+<script>
+    function ketqua() {
+        let dotuoi = document.getElementById('dotuoi').value
+        let obtain;
+        alert="ketqua"
+        if (dotuoi == 15)
+        obtain = ('đủ yêu cầu')
+        else if (dotuoi < 14)
+        obtain = ('ko đủ yêu cầu')
+        else if (dotuoi > 17)
+        obtain = ('quá độ tuổi')
+        document.getElementById("ketqua").innerHTML = obtain;
+    }
+</script>

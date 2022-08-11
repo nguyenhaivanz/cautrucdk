@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>điểm bài kiểm tra</p>
+<input id="baikiemtra" placeholder="nhập điểm">
+<p>điểm kiểm tra giữa kì</p>
+<input id="diemgiuaki" type="text" placeholder="nhập điểm">
+<p>điểm kiểm tra cuối kì</p>
+<input id="diemcuoiki" type="text" placeholder="nhập điểm">
+<br>
+<br>
+<button onclick="Kiemtra()">Kiemtra</button>
+<p id="Kiemtra"></p>
+</body>
+</html>
+<script>
+  function Kiemtra() {
+      alert("kêt quả");
+      let baikiemtra = parseInt(document.getElementById("baikiemtra").value);
+      let diemgiuaki = parseInt(document.getElementById("diemgiuaki").value)
+      let diemcuoiki = parseInt(document.getElementById("diemcuoiki").value)
+      let Kiemtra = (baikiemtra + diemgiuaki + diemcuoiki) / 3;
+      alert(baikiemtra);
+      alert(diemgiuaki);
+      alert(Kiemtra);
+      if (Kiemtra < 5 )
+      point = ('học lực yếu')
+      else if (Kiemtra < 6 )
+      point = ('học lực TB')
+      else if (Kiemtra < 7.5 )
+          point = ('học lực khá')
+      else if (Kiemtra < 8.5 )
+          point = ('học lực giỏi')
+      else
+          point = ('hoc sinh xuất sắc')
+      document.getElementById("Kiemtra").innerHTML = point;
+  }
+</script>

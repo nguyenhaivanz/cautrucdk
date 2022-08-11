@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhso = parseFloat(prompt("nhap vao doanh so cua ban"));
+    let hoahong;
+    if (doanhso<=1e7) {
+        hoahong = doanhso*4/100;
+        document.write("hoa hong ban nhan duoc la " + hoahong + "VND");
+    }else {
+        if (doanhso<2e7) {
+            hoahong = doanhso*6/100;
+            document.write("hoa hong ban nhan duoc la " + hoahong + "VND");
+        }else {
+            if (doanhso<= 5e7) {
+                hoahong = doanhso*7/100;
+                document.write("hoa hong ban nhan duoc la " + hoahong + "VND");
+            }else {
+                hoahong = doanhso*8/100;
+                document.write("hoa hong ban nhan duoc la " + hoahong + "VND");
+            }
+        }
+    }
+</script>
+</body>
+</html>
